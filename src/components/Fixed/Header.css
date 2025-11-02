@@ -1,0 +1,22 @@
+.header-container{
+    background: #000000;
+    color: white;
+    display: flex;
+}
+
+.header{
+
+}
+
+.list{
+    display: flex;
+    list-style: none;
+}
+
+.list-item{
+
+}
+
+.list-link{
+    text-decoration: none;
+}
