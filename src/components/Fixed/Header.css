@@ -1,5 +1,5 @@
 .header-container{
-    background: #000000;
+    /* background: #000000; */
     color: white;
     display: flex;
 }
@@ -9,14 +9,18 @@
 }
 
 .list{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 5px;
     list-style: none;
+    padding: 10px;
 }
 
 .list-item{
-
+    font-weight: bold;
 }
 
 .list-link{
+    color: #fff;
     text-decoration: none;
 }

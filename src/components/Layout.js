@@ -5,6 +5,7 @@ import Footer from "./Fixed/Footer";
 const Layout = () => {
     return (
         <>
+            <div className="particles"></div>
             <Header />
             <Outlet />
             <Footer />

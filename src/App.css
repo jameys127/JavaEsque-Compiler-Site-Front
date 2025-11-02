@@ -1,0 +1,24 @@
+body {
+  background-color: #0a0a0a;
+  overflow: hidden;
+  color: #eee;
+}
+
+/* particle layer */
+.particles {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  background: radial-gradient(circle at 10% 20%, #9900ff 1px, transparent 2px),
+              radial-gradient(circle at 80% 70%, #ff00b3 1px, transparent 2px),
+              radial-gradient(circle at 50% 90%, #ea00ff 1px, transparent 2px);
+  background-size: 200px 200px;
+  animation: moveParticles 60s linear infinite;
+  opacity: 0.4;
+}
+
+@keyframes moveParticles {
+  from { background-position: 0 0, 0 0, 0 0; }
+  to { background-position: 200px 200px, -200px -200px, 400px 0; }
+}
