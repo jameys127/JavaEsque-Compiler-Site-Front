@@ -1,6 +1,4 @@
 .header-container{
-    /* background: #000000; */
-    color: white;
     display: flex;
 }
 
@@ -39,7 +37,7 @@
     display: inline-block;
     color: #e76fff;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
 }
 
 .list-link-active::before{

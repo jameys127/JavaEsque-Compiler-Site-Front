@@ -1,11 +1,4 @@
-body {
-  background-color: #0a0a0a;
-  overflow: hidden;
-  color: #eee;
-}
-
-/* particle layer */
-.particles {
+/* .particles {
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
@@ -16,9 +9,9 @@ body {
   background-size: 200px 200px;
   animation: moveParticles 60s linear infinite;
   opacity: 0.4;
-}
+} */
 
-@keyframes moveParticles {
+/* @keyframes moveParticles {
   from { background-position: 0 0, 0 0, 0 0; }
   to { background-position: 200px 200px, -200px -200px, 400px 0; }
-}
+} */
