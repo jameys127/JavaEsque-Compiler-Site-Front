@@ -1,0 +1,32 @@
+.cursor{
+    display: inline-block;
+    width: 0.6rem;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: #e76fff; /* same green as your text */
+  }
+}
+
+.terminal::-webkit-scrollbar {
+  width: 8px;
+}
+
+.terminal::-webkit-scrollbar-track {
+  background: #111;
+}
+
+.terminal::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border-radius: 4px;
+  border: 1px solid #222;
+}
+
+.terminal::-webkit-scrollbar-thumb:hover {
+  background-color: #666;
+}
