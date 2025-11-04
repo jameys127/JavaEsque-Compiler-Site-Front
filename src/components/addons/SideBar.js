@@ -10,13 +10,13 @@ const SideBar = ({setMarkdown}) => {
             <SideBarButton 
               text='Introduction' 
               onClick={() => {
-                setMarkdown('/docs/introduction.md')
+                setMarkdown('/introduction.md')
                 console.log('working');
               }}/>
             <SideBarButton 
               text='Syntax' 
               onClick={() => {
-                setMarkdown('/docs/syntax.md')
+                setMarkdown('/syntax.md')
                 console.log('working');
               }}/>
         </Box>
