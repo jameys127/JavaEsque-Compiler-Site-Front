@@ -14,7 +14,7 @@ const Header = () => {
                     </Link>
                 </li>
                 <li className='list-item'>
-                    <Link to='/docs' className={location.pathname === '/docs' ? 'list-link-active' : 'list-link'}>
+                    <Link to='/docs/' className={location.pathname === ('/docs/') ? 'list-link-active' : 'list-link'}>
                         Docs
                     </Link>
                 </li>

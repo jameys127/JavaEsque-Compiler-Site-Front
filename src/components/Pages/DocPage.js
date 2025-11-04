@@ -1,13 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
+import SideBar from '../addons/SideBar'
+import { createTheme, Divider, ThemeProvider } from '@mui/material'
+import DocContentPage from '../addons/DocContentPage'
 
 const DocPage = () => {
+  const [markdown, setMarkdown] = useState('/docs/introduction.md');
   return (
-    <main className="flex min-h-200 flex-col items-center justify-center">
-      <h1 className="text-5xl font-bold animate-pulse">
-        Tailwind is working!
-      </h1>
-
-    </main>
+    <div className='flex p-5 h-[90vh]'>
+      <SideBar setMarkdown={setMarkdown}/>
+      <DocContentPage markdownPath={markdown} />
+    </div>
   )
 }
 
