@@ -1,4 +1,4 @@
-import React, { useCallback, useContext, useState } from 'react'
+import React, { useCallback, useContext, useState, useEffect } from 'react'
 import CodeMirror from '@uiw/react-codemirror';
 import { vscodeDark } from '@uiw/codemirror-theme-vscode';
 import Terminal from '../addons/Terminal';
@@ -13,6 +13,23 @@ import {CompilerContext} from '../Fixed/Context';
 const CompilerPage = () => {
   const {program, setProgram, output, setOutput} = useContext(CompilerContext);
   const [loading, setLoading] = useState(false);
+  const [sandbox, setSandbox] = useState(null);
+
+  useEffect(() => {
+    const iframe = document.createElement('iframe');
+    iframe.style.display = 'none';
+    document.body.appendChild(iframe);
+
+    iframe.contentWindow.console = {
+      log: () => {},
+      error: () => {},
+      warn: () => {}
+    };
+
+    setSandbox(iframe.contentWindow);
+
+    return () => iframe.remove();
+  }, []);
 
   const onChange = useCallback((val) => {
     setProgram(val);
@@ -35,7 +52,31 @@ const CompilerPage = () => {
         setOutput(`****Compilation: Failed!****\n${data.error}`);
         setLoading(false);
       }else{
-        setOutput(`****Compilation: Successful!****\n${data.output}\nDone;`);
+        if(!sandbox){
+          setOutput('Sandbox not ready, refresh page')
+          return;
+        }
+        let captured = '';
+        const sandboxConsole = sandbox.console;
+        const originalLog = sandboxConsole.log;
+
+        sandboxConsole.log = (...args) => {
+          const line = args.join(' ');
+          captured += line + '\n';
+          originalLog.apply(sandboxConsole, args);
+        };
+
+        try{
+          sandbox.eval(data.output);
+        } catch(e){
+          captured += `Runtime error: ${e.message}\n`;
+          setOutput(`## JAVASCRIPT ERROR ##\n${captured.trim() || ''}\nDone;`);
+          return;
+        } finally{
+          sandboxConsole.log = originalLog;
+        }
+
+        setOutput(`****Compilation: Successful!****\n${captured.trim() || ''}\nDone;`);
         setLoading(false);
       }
     },
