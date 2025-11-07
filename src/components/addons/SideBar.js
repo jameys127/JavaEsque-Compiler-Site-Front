@@ -11,14 +11,39 @@ const SideBar = ({setMarkdown}) => {
               text='Introduction' 
               onClick={() => {
                 setMarkdown('/introduction.md')
-                console.log('working');
-              }}/>
+              }}
+            />
             <SideBarButton 
               text='Syntax' 
               onClick={() => {
                 setMarkdown('/syntax.md')
-                console.log('working');
-              }}/>
+              }}
+            />
+            <SideBarButton 
+              text='Getting Started' 
+              onClick={() => {
+                setMarkdown('/started.md')
+              }}
+            />
+            <SideBarButton 
+              text='Classes' 
+              onClick={() => {
+                setMarkdown('/classes.md')
+              }}
+            />
+            <SideBarButton 
+              text='Statements' 
+              onClick={() => {
+                setMarkdown('/statements.md')
+              }}
+            />
+            <SideBarButton 
+              text='Example Program' 
+              onClick={() => {
+                setMarkdown('/example.md')
+              }}
+            />
+            
         </Box>
     </div>
   )
