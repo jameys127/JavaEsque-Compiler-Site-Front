@@ -104,8 +104,8 @@ const CompilerPage = () => {
       <CodeMirror className='w-1/2 p-3' value={program} height='80vh' theme={vscodeDark} onChange={onChange}/>
       <div className='flex flex-col p-3 w-1/2 text-white'>
         <div className='flex flex-col h-[35vh] p-2 justify-center items-center'>
-          <h1 className='text-blue-200 font-bold text-center text-[2.3rem] font-mono'>JavaEsque Compiler</h1>
-          <p className='text-center'>My custom language built in Java that compiles to Javascript.<br/>You can find the source code on <a href='https://github.com/jameys127'>Github</a></p>
+          <h1 className='text-[#e76fff] font-bold text-center text-[2.3rem] font-mono'>JavaEsque Compiler</h1>
+          <p className='text-center'>My custom language built in Java that compiles to Javascript.<br/>You can find the source code on <a className='text-[#e76fff] hover:text-[#f1a9ff] hover:font-bold duration-200 ease-in' href='https://github.com/jameys127/JavaEsque-Language' target='_blank' rel='noopener noreferrer'>Github</a></p>
         </div>
         <div className='h-[5vh]'>
           <ThemeProvider theme={theme}>
