@@ -4,8 +4,10 @@ import './Footer.css';
 const Footer = () => {
   // const currentYear = new Date.getFullYear();
   return (
-    <footer className='fixed bottom-0 text-center w-full'>
-      <p>© Copyright {new Date().getFullYear()} Jeremiah Sheehy. All rights reserved</p>
+    <footer className='flex grow w-full h-full'>
+      <div className='flex justify-center items-end w-full pb-1'>
+        <p>© Copyright {new Date().getFullYear()} Jeremiah Sheehy. All rights reserved</p>
+      </div>
     </footer>
   )
 }

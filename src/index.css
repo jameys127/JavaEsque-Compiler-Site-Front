@@ -7,6 +7,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-amber-500: oklch(76.9% 0.188 70.08);
     --color-blue-200: oklch(88.2% 0.059 254.128);
     --color-black: #000;
     --color-white: #fff;
@@ -201,6 +202,9 @@
   }
   .z-20 {
     z-index: 20;
+  }
+  .m-auto {
+    margin: auto;
   }
   .prose {
     color: var(--tw-prose-body);
@@ -617,6 +621,9 @@
       margin-bottom: 0;
     }
   }
+  .mt-auto {
+    margin-top: auto;
+  }
   .flex {
     display: flex;
   }
@@ -629,11 +636,20 @@
   .h-\[5vh\] {
     height: 5vh;
   }
+  .h-\[6vh\] {
+    height: 6vh;
+  }
+  .h-\[7vh\] {
+    height: 7vh;
+  }
   .h-\[35vh\] {
     height: 35vh;
   }
   .h-\[40vh\] {
     height: 40vh;
+  }
+  .h-\[80vh\] {
+    height: 80vh;
   }
   .h-\[90vh\] {
     height: 90vh;
@@ -641,14 +657,26 @@
   .h-full {
     height: 100%;
   }
+  .h-screen {
+    height: 100vh;
+  }
   .max-h-full {
     max-height: 100%;
   }
+  .min-h-\[5vh\] {
+    min-height: 5vh;
+  }
+  .min-h-\[8vh\] {
+    min-height: 8vh;
+  }
+  .min-h-\[9vh\] {
+    min-height: 9vh;
+  }
+  .min-h-\[11vh\] {
+    min-height: 11vh;
+  }
   .min-h-\[80vh\] {
     min-height: 80vh;
-  }
-  .min-h-\[90vh\] {
-    min-height: 90vh;
   }
   .min-h-full {
     min-height: 100%;
@@ -674,6 +702,15 @@
   .min-w-screen {
     min-width: 100vw;
   }
+  .flex-grow {
+    flex-grow: 1;
+  }
+  .grow {
+    flex-grow: 1;
+  }
+  .grow-0 {
+    flex-grow: 0;
+  }
   .border-collapse {
     border-collapse: collapse;
   }
@@ -685,6 +722,9 @@
   }
   .items-center {
     align-items: center;
+  }
+  .items-end {
+    align-items: flex-end;
   }
   .justify-center {
     justify-content: center;
@@ -714,6 +754,14 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-0 {
+    border-style: var(--tw-border-style);
+    border-width: 0px;
+  }
+  .border-2 {
+    border-style: var(--tw-border-style);
+    border-width: 2px;
+  }
   .border-solid {
     --tw-border-style: solid;
     border-style: solid;
@@ -729,6 +777,9 @@
   }
   .bg-\[rgb\(17\,17\,17\)\] {
     background-color: rgb(17,17,17);
+  }
+  .bg-amber-500 {
+    background-color: var(--color-amber-500);
   }
   .bg-black {
     background-color: var(--color-black);
@@ -753,6 +804,15 @@
   }
   .p-5 {
     padding: calc(var(--spacing) * 5);
+  }
+  .pb-0 {
+    padding-bottom: calc(var(--spacing) * 0);
+  }
+  .pb-0\.5 {
+    padding-bottom: calc(var(--spacing) * 0.5);
+  }
+  .pb-1 {
+    padding-bottom: calc(var(--spacing) * 1);
   }
   .text-center {
     text-align: center;

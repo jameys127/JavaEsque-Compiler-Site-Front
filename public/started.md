@@ -8,6 +8,8 @@ So the TLDR:
 - All statements must end with a semi-colon
 - Trying to compile an empty file or a program with a class decleration after a statement will result in a compile time error
 
+The data types that are available in this language are **int**, **boolean**, **String**, and custom **classes**. The basic expressions are available for these data types such as addition, subtraction, multiplication, and division as well as boolean checks like greater than and less than.
+
 ## Easy Program
 
 The easiest program to get started is a basic 'Hello, World!' To print to the console, you would use a println statement:
