@@ -8,10 +8,10 @@ const SideBar = ({setMarkdown, setSidebarOpen}) => {
     setSidebarOpen(false);
   }
   return (
-    <div className='sidebar lg:w-65 sm:w-50 md:w-50 w-65 h-full sm:rounded-bl-2xl border border-[#333] sm:rounded-tl-2xl bg-[rgb(17,17,17)] overflow-y-scroll'>
+    <div className='sidebar lg:w-65 sm:w-50 md:w-50 w-65 h-full sm:rounded-bl-2xl sm:border sm:border-[#333] sm:rounded-tl-2xl bg-[rgb(17,17,17)] overflow-y-scroll'>
         <Box>
             <div className='sm:hidden flex w-full justify-end'>
-              <i className='fa-solid fa-times pt-2 pb-2 cursor-pointer' onClick={handleClick}></i>
+              <i className='fa-solid fa-times text-[1.2rem] pt-3 pb-3 pr-3 cursor-pointer' onClick={handleClick}></i>
             </div>
             <SideBarButton 
               text='Introduction' 

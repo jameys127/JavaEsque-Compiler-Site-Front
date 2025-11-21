@@ -100,14 +100,18 @@ const CompilerPage = () => {
 
 
   return (
-    <div className='flex p-4 min-h-[80vh]'>
-      <CodeMirror className='w-1/2 p-3' value={program} height='80vh' theme={vscodeDark} onChange={onChange}/>
-      <div className='flex flex-col p-3 w-1/2 text-white'>
-        <div className='flex flex-col h-[35vh] p-2 justify-center items-center'>
+    <div className='flex flex-col lg:flex-row p-4 min-h-[80vh]'>
+      <div className='flex flex-col h-[20vh] p-2 justify-center items-center lg:hidden'>
+        <h1 className='text-[#e76fff] font-bold text-center text-[2rem] sm:text-[2.3rem] font-mono'>JavaEsque Compiler</h1>
+        <p className='text-center text-[0.9rem] sm:text-[1rem]'>My custom language built in Java that compiles to Javascript.<br/>You can find the source code on <a className='text-[#e76fff] hover:text-[#f1a9ff] hover:font-bold duration-200 ease-in' href='https://github.com/jameys127/JavaEsque-Language' target='_blank' rel='noopener noreferrer'>Github</a></p>
+      </div>
+      <CodeMirror className='w-full sm:h-[70vh] lg:h-[83vh] h-[50vh] lg:w-1/2 p-3' value={program} height='100%' theme={vscodeDark} onChange={onChange}/>
+      <div className='flex flex-col p-3 w-full lg:w-1/2 text-white'>
+        <div className='lg:flex flex-col h-[35vh] p-2 justify-center items-center hidden'>
           <h1 className='text-[#e76fff] font-bold text-center text-[2.3rem] font-mono'>JavaEsque Compiler</h1>
           <p className='text-center'>My custom language built in Java that compiles to Javascript.<br/>You can find the source code on <a className='text-[#e76fff] hover:text-[#f1a9ff] hover:font-bold duration-200 ease-in' href='https://github.com/jameys127/JavaEsque-Language' target='_blank' rel='noopener noreferrer'>Github</a></p>
         </div>
-        <div className='h-[5vh]'>
+        <div className='h-[5vh] self-center lg:self-start'>
           <ThemeProvider theme={theme}>
             <Button 
               variant='contained' 
@@ -123,7 +127,7 @@ const CompilerPage = () => {
             </Button>
           </ThemeProvider>
         </div>
-        <div className='flex flex-col h-[40vh]'>
+        <div className='flex flex-col h-[40vh] pt-2 lg:pt-0'>
           <Terminal output={output}/>
         </div>
       </div>
