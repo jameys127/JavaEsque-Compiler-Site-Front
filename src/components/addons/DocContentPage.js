@@ -14,7 +14,7 @@ const DocContentPage = ({markdownPath}) => {
     }, [markdownPath]);
 
   return (
-    <div className='w-full bg-[rgb(17,17,17)] border border-[#333] rounded-br-2xl rounded-tr-2xl overflow-hidden'>
+    <div className='w-full bg-[rgb(17,17,17)] border border-[#333] rounded-2xl sm:rounded-none sm:rounded-br-2xl sm:rounded-tr-2xl overflow-hidden'>
         <div className='doc h-full overflow-y-scroll p-4'>
             <article className='prose prose-sm sm:prose lg:prose-xl sm:prose-invert prose-invert sm:max-w-none max-w-none'>
             <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdown}</ReactMarkdown>
