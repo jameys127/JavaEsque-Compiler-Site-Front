@@ -1,16 +1,13 @@
 import React from 'react'
-import {motion} from 'framer-motion';
+import { useLocation } from 'react-router-dom';
 
 const AnimatedRoutes = ({children}) => {
+  const location = useLocation();
+  // Keying on the path remounts the div, replaying the CSS animation on each navigation
   return (
-    <motion.div
-        initial={{opacity:0}}
-        animate={{opacity:1}}
-        exit={{opacity:0}}
-        transition={{duration: 0.2}}
-    >
+    <div key={location.pathname} className="page-in">
         {children}
-    </motion.div>
+    </div>
   )
 }
 
