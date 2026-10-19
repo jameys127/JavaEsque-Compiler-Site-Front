@@ -70,13 +70,13 @@ const CompilerPage = () => {
           sandbox.eval(data.output);
         } catch(e){
           captured += `Runtime error: ${e.message}\n`;
-          setOutput(`## JAVASCRIPT ERROR ##\n${captured.trim() || ''}\nDone;`);
+          setOutput(`## JAVASCRIPT ERROR ##\n${captured.trim() || ''}`);
           return;
         } finally{
           sandboxConsole.log = originalLog;
         }
 
-        setOutput(`****Compilation: Successful!****\n${captured.trim() || ''}\nDone;`);
+        setOutput(`****Compilation: Successful!****\n${captured.trim() || ''}`);
         setLoading(false);
       }
     },
